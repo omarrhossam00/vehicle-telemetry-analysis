@@ -1,12 +1,12 @@
-# sparx-telemetry-analysis
+# vehicle-telemetry-analysis
 
-Python data analysis of vehicle OBD-II telemetry using pandas and matplotlib — practice run before applying the same pipeline to real SparX Racing telemetry.
+Python data analysis of vehicle OBD-II telemetry using pandas and matplotlib — practice run before applying the same pipeline to real SparkX Racing telemetry.
 
 ## Data
 
 (https://www.kaggle.com/datasets/pedro2025/obd2-panel-opel-2012/data) — ~789k rows of logged OBD-II signals (RPM, speed, throttle position, engine load, coolant/intake temp, torque, power, fuel usage) across multiple driving sessions.
 
-This is **not** SparX data — SparX telemetry wasn't available for this pass, so a public OBD-II dataset was used to build and validate the pipeline first. The goal was to prove the analysis approach (cleaning, plotting, extracting a real insight) on a large, messy real-world dataset before pointing it at SparX CAN logs.
+This is **not** SparkX data — SparX telemetry wasn't available for this pass, so a public OBD-II dataset was used to build and validate the pipeline first. The goal was to prove the analysis approach (cleaning, plotting, extracting a real insight) on a large, messy real-world dataset before pointing it at SparkX CAN logs.
 
 ## Approach
 
@@ -33,7 +33,7 @@ This is **not** SparX data — SparX telemetry wasn't available for this pass, s
 
 ![RPM vs Speed](plots/speed_vs_rpm.png)
 
-## What I'd do differently with real SparX data
+## What I'd do differently with real SparkX data
 
 - Use actual CAN frame timestamps instead of session-file grouping, so plots reflect real lap/session boundaries rather than file boundaries.
 - Cross-check `SPEED` against wheel-speed sensor data (if logged separately) instead of trusting a single OBD PID, given the 255 km/h ceiling seen here.
