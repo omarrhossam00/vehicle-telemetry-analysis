@@ -6,7 +6,7 @@ Python data analysis of vehicle OBD-II telemetry using pandas and matplotlib —
 
 (https://www.kaggle.com/datasets/pedro2025/obd2-panel-opel-2012/data) — ~789k rows of logged OBD-II signals (RPM, speed, throttle position, engine load, coolant/intake temp, torque, power, fuel usage) across multiple driving sessions.
 
-This is **not** SparkX data — SparX telemetry wasn't available for this pass, so a public OBD-II dataset was used to build and validate the pipeline first. The goal was to prove the analysis approach (cleaning, plotting, extracting a real insight) on a large, messy real-world dataset before pointing it at SparkX CAN logs.
+This is **not** SparkX data — SparkX telemetry wasn't available for this pass, so a public OBD-II dataset was used to build and validate the pipeline first. The goal was to prove the analysis approach (cleaning, plotting, extracting a real insight) on a large, messy real-world dataset before pointing it at SparkX CAN logs.
 
 ## Approach
 
@@ -38,5 +38,5 @@ This is **not** SparkX data — SparX telemetry wasn't available for this pass, 
 
 - Use actual CAN frame timestamps instead of session-file grouping, so plots reflect real lap/session boundaries rather than file boundaries.
 - Cross-check `SPEED` against wheel-speed sensor data (if logged separately) instead of trusting a single OBD PID, given the 255 km/h ceiling seen here.
-- Add a lap-by-lap comparison view once SparX sessions are labeled by track/lap, instead of just per-session averages.
+- Add a lap-by-lap comparison view once SparkX sessions are labeled by track/lap, instead of just per-session averages.
 - Investigate the fuel-usage outlier tail against throttle/RPM at the same timestamps, to confirm it's genuine hard-acceleration behavior and not a logging glitch.
