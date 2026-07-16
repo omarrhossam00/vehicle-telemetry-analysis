@@ -4,7 +4,7 @@ Python data analysis of vehicle OBD-II telemetry using pandas and matplotlib —
 
 ## Data
 
-[2012 Opel OBD-II Driving Dataset (Kaggle)](https://www.kaggle.com/)](https://www.kaggle.com/datasets/pedro2025/obd2-panel-opel-2012/data) — ~789k rows of logged OBD-II signals (RPM, speed, throttle position, engine load, coolant/intake temp, torque, power, fuel usage) across multiple driving sessions.
+(https://www.kaggle.com/datasets/pedro2025/obd2-panel-opel-2012/data) — ~789k rows of logged OBD-II signals (RPM, speed, throttle position, engine load, coolant/intake temp, torque, power, fuel usage) across multiple driving sessions.
 
 This is **not** SparX data — SparX telemetry wasn't available for this pass, so a public OBD-II dataset was used to build and validate the pipeline first. The goal was to prove the analysis approach (cleaning, plotting, extracting a real insight) on a large, messy real-world dataset before pointing it at SparX CAN logs.
 
