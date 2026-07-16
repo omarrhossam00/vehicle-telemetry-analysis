@@ -31,7 +31,8 @@ This is **not** SparkX data — SparX telemetry wasn't available for this pass, 
   - `TORQUE` and `POWER` are only populated for ~22% of rows (174,528 of 789,308) — any torque/power claim is based on a smaller slice of the data than the rest of the stats.
   - `REAL_FUEL_USAGE_ML_MIN` has a long right tail (75th percentile 76 ml/min, max 1049.7 ml/min), likely short bursts during hard acceleration.
 
-![RPM vs Speed](plots/speed_vs_rpm.png)
+
+<img width="1000" height="500" alt="speed_vs_rpm" src="https://github.com/user-attachments/assets/a4c41733-9cb6-445e-b104-8a7487767a08" />
 
 ## What I'd do differently with real SparkX data
 
